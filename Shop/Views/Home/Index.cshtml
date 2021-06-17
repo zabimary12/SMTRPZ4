@@ -1,0 +1,13 @@
+﻿@model HomeViewModel
+
+<h2>Самые покупаемые ножи</h2>
+<div class="row mt-5 mb-2">
+    @{
+        foreach (Knife knife in Model.favKnives)
+        {
+            @Html.Partial("AllKnives", knife)
+
+        }
+    }
+</div>
+

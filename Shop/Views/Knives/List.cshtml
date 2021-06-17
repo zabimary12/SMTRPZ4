@@ -1,0 +1,12 @@
+﻿
+<h2>Все НОЖИ</h2>
+<h3>@Model.currCategory</h3>
+<div class="row mt-5 mb-2">
+    @{
+        foreach (Knife knife in Model.GetKnives)
+        {
+            @Html.Partial("AllKnives", knife)
+
+        }
+    }
+</div>

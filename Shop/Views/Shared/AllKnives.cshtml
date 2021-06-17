@@ -1,0 +1,18 @@
+﻿@model Knife
+
+<style>
+    .btn-warning {
+        background: navy; /* Синий цвет фона */
+        color: white; /* Белые буквы */
+        font-size: 9pt; /* Размер шрифта в пунктах */
+    }
+</style>
+
+<div class="col-lg-4">
+    <img class="img-thumnail" src="@Model.imgKnife" width="250" height="250" alt="@Model.nameKnife" />
+    <h2>@Model.nameKnife</h2>
+    <p>@Model.shortDisc</p>
+    <p>Цена: @Model.priceKnife.ToString("c")</p>
+    <p><a class="btn btn-warning" asp-controller="ShopCart" asp-action="addToCart", asp-route-id="@Model.id">Добавить в корзину</a></p>
+
+</div>
